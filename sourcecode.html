@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quellcode - Noah's Random Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        pre {
+            background-color: #282c34;
+            color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            max-width: 80%;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #0078D7;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Quellcode von Noah's Random Links</h1>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Noah's Random Links&lt;/title&gt;
+    &lt;style&gt; ... &lt;/style&gt;
+    &lt;script&gt; ... &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button id="updateLogButton"&gt;Update Log&lt;/button&gt;
+    &lt;h1&gt;Noah's Random Links&lt;/h1&gt;
+    &lt;button onclick="redirectToRandomWikipediaPage()"&gt;Random Wikipedia Page&lt;/button&gt;
+    &lt;button onclick="redirectToSourceCodePage()"&gt;View Source Code&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <button class="button" onclick="window.history.back()">Zurück zur Hauptseite</button>
+    </div>
+</body>
+</html>

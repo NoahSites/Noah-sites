@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah's Random Links</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        .button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #0078D7;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #005fa3;
+        }
+        #updateLogButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        #updateLogButton:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+        function redirectToRandomWikipediaPage() {
+            window.location.href = "https://en.wikipedia.org/wiki/Special:Random"; // You can change this to the German version if needed
+        }
+
+        function redirectToSourceCodePage() {
+            window.location.href = "sourcecode.html"; // Redirect to the new page showing the source code
+        }
+
+        // Function to detect the user's language
+        function detectLanguage() {
+            var userLang = navigator.language || navigator.userLanguage; // Get browser language
+            return userLang.includes("de") ? "de" : "en"; // Check if the language includes "de" (German) or otherwise assume English
+        }
+
+        // Function to update text content based on the language
+        function updateTextContent() {
+            var language = detectLanguage();
+
+            if (language === "de") {
+                // German text
+                document.getElementById("header").innerText = "Noah's Zufällige Links";
+                document.getElementById("randomWikipediaButton").innerText = "Zufällige Wikipedia-Seite";
+                document.getElementById("sourceCodeButton").innerText = "Quellcode anzeigen";
+                document.getElementById("updateLogButton").innerText = "Update Log";
+            } else {
+                // English text
+                document.getElementById("header").innerText = "Noah's Random Links";
+                document.getElementById("randomWikipediaButton").innerText = "Random Wikipedia Page";
+                document.getElementById("sourceCodeButton").innerText = "View Source Code";
+                document.getElementById("updateLogButton").innerText = "Update Log";
+            }
+        }
+
+        // Call the function to set text when the page loads
+        window.onload = updateTextContent;
+    </script>
+</head>
+<body>
+    <!-- Update Log Button -->
+    <button id="updateLogButton" onclick="openUpdateLog()">Update Log</button>
+
+    <div>
+        <h1 id="header">Noah's Random Links</h1>
+        <a href="#" class="button" id="randomWikipediaButton" onclick="redirectToRandomWikipediaPage()">Random Wikipedia Page</a>
+        <button class="button" id="sourceCodeButton" onclick="redirectToSourceCodePage()">View Source Code</button>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
